@@ -1,9 +1,23 @@
 #include<stdio.h>
+ 
+int add(int x, int y);
+ 
 int main()
 {
-    int a,b,sum;
-    printf("enter two numbers:");
-    scanf("%d%d",&a,&b);
-    sum = a+b;
-    printf("sum of %d and %d is %d",a,b,sum);
+    int num1, num2, a;
+    printf("\nAdd First Number:");
+    scanf("%d", &num1);
+    printf("\nAdd Second Number:");
+    scanf("%d", &num2);
+    a = add(num1, num2);
+    printf("\nAddition of Two Numbers: %d", a);
+    printf("\n");
+    return 0;
+}
+ 
+int add(int x, int y)
+{
+    int sum;
+    sum = x + y;
+    return sum;
 }
