@@ -1,9 +1,23 @@
 #include<stdio.h>
+ 
+float add(float x, float y);
+ 
 int main()
 {
-    float a,b,sum;
-    printf("enter two decimal numbers:");
-    scanf("%f%f",&a,&b);
-    sum = a+b;
-    printf("sum of %f and %f is %f",a,b,sum);
+    float num1, num2, a;
+    printf("\nAdd First Number:");
+    scanf("%f", &num1);
+    printf("\nAdd Second Number:");
+    scanf("%f", &num2);
+    a = add(num1, num2);
+    printf("\nAddition of Two Numbers: %f", a);
+    printf("\n");
+    return 0;
+}
+ 
+float add(float x, float y)
+{
+    float sum;
+    sum = x + y;
+    return sum;
 }
